@@ -1,6 +1,6 @@
 <div class="col-12">
     @if($articles->count())
-        <table class="table table-striped">
+        <table class="table table-striped border">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -17,7 +17,11 @@
                         <td>{{ $article->title }}</td>
                         <td>{{ $article->subtitle }}</td>
                         <td>{{ $article->created_at->format('d-m-Y') }}</td>
-                        <td>Azioni</td>
+                        <td>
+                            <a href="{{ route('article.edit', compact('article')) }}" class="text-secondary">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
