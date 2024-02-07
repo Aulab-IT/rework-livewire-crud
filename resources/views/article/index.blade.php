@@ -1,6 +1,9 @@
 <x-layouts.app>
     <div class="container my-5">
-        <div class="row justify-content-end mb-3 pb-3 border-bottom">
+        <div class="row justify-content-between mb-3 pb-3 border-bottom">
+            <div class="col-12 col-md-8">
+                <h1>Articoli</h1>
+            </div>
             <div class="col-12 col-md-2">
                 <a href="{{ route('article.create') }}" class="btn btn-dark w-100">Crea Articolo</a>
             </div>
