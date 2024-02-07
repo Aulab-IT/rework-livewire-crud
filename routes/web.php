@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,5 @@ Route::get('/articles/index', [ArticleController::class, 'index'])->name('articl
 Route::get('/articles/create', [ArticleController::class, 'create'])->name('article.create');
 Route::get('/article/{article}/edit', [ArticleController::class, 'edit'])->name('article.edit');
 Route::delete('/article/{article}/destroy', [ArticleController::class, 'destroy'])->name('article.destroy');
+
+Route::get('/users/index', [UserController::class, 'index'])->name('user.index');
