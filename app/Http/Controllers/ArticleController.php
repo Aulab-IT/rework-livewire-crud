@@ -38,20 +38,4 @@ class ArticleController extends Controller
     {
         return view('article.edit', compact('article'));
     }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Article $article)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Article $article)
-    {
-        //
-    }
 }

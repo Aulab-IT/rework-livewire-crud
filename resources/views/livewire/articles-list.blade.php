@@ -17,9 +17,12 @@
                         <td>{{ $article->title }}</td>
                         <td>{{ $article->subtitle }}</td>
                         <td>{{ $article->created_at->format('d-m-Y') }}</td>
-                        <td>
+                        <td class="d-flex justify-content-between">
                             <a href="{{ route('article.edit', compact('article')) }}" class="text-secondary">
                                 <i class="fa-regular fa-pen-to-square"></i>
+                            </a>
+                            <a href="/article/delete" wire:click.prevent="destroy({{ $article->id }})" class="text-secondary">
+                                <i class="fa-regular fa-trash-can"></i>
                             </a>
                         </td>
                     </tr>

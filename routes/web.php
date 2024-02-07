@@ -20,3 +20,4 @@ Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/articles/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/articles/create', [ArticleController::class, 'create'])->name('article.create');
 Route::get('/article/{article}/edit', [ArticleController::class, 'edit'])->name('article.edit');
+Route::delete('/article/{article}/destroy', [ArticleController::class, 'destroy'])->name('article.destroy');
